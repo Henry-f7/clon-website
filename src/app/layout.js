@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import "flowbite";
+import "flowbite/dist/flowbite.min.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${openSans.variable} antialiased`}>
         <Navbar />
-        {children}
+        <div className="mt-24">{children}</div>
       </body>
     </html>
   );

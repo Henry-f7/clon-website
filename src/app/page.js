@@ -1,5 +1,9 @@
-import { Alert } from "flowbite-react";
+import Presentation from "@/components/Presentation";
 
 export default function Home() {
-  return <Alert color="info">Alert!</Alert>;
+  return (
+    <>
+      <Presentation />
+    </>
+  );
 }

@@ -5,11 +5,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-  'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-  'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --font-open-sans: 'Open Sans', sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --byzantine-blue: #1b233b;
+  --dark-byzantine-blue: #192139;
+  --light-black: #00000029;
+  --dark-blue: #1c243e;
+  --bg-section: #00071d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +25,53 @@
 }
 
 body {
-  color: var(--foreground);
-  background-color: var(--background);
+  background-color: white;
   font-family: var(--font-open-sans);
+}
+
+/* Referral Program */
+.referral-program-background {
+  background-size: cover;
+  background: transparent
+      linear-gradient(53deg, var(--bg-section) 0%, var(--dark-blue) 100%) 0% 0% no-repeat
+      padding-box;
+  height: calc(100vh - 91px);
+}
+
+/* Carousel */
+
+.custom-carousel .absolute.inset-y-0 {
+  display: none !important;
+}
+
+.PresentationCarouselCard {
+  backdrop-filter: blur(18px);
+  background: transparent
+    conic-gradient(
+      from 53deg at 50% 50%,
+      var(--byzantine-blue) 0%,
+      var(--dark-byzantine-blue) 100%
+    )
+    0% 0% no-repeat padding-box;
+  box-shadow: 4px 3px 10px var(--light-black);
+}
+
+.PresentationCarouselCard-image {
+  backdrop-filter: blur(38px);
+  -webkit-backdrop-filter: blur(38px);
+  background: transparent
+    conic-gradient(from 235deg at 50% 50%, #242a41 0%, #21283e 100%) 0% 0%
+    no-repeat padding-box;
+}
+
+.PresentationCarouselCard-skill {
+  margin-right: 3px;
+}
+
+.PresentationCarouselCard-skill::after {
+  content: ", ";
+}
+
+.PresentationCarouselCard-skill:last-child::after {
+  content: "";
 }
