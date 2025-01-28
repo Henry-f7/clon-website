@@ -20,6 +20,7 @@ export default {
         "dark-byzantine-blue": "#192139",
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "smbs-orange": "var(--orange)",
       },
     },
   },
