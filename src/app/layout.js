@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${openSans.variable} antialiased`}>
         <Navbar />
-        <div className="mt-24">{children}</div>
+        <div className="mt-[90px]">{children}</div>
       </body>
     </html>
   );

@@ -1,11 +1,13 @@
+import Link from "next/link";
+
 const NavbarButton = () => {
   return (
-    <button
-      type="button"
-      className="text-white uppercase h-14 w-64 bg-orange-400 font-semibold text-lg px-4 py-2 text-center"
+    <Link
+      href="#"
+      className="flex text-white bg-smbs-orange uppercase h-[51px] w-[260px] font-bold text-sm text-center tracking-[2px] items-center justify-center"
     >
       Schedule a call
-    </button>
+    </Link>
   );
 };
 
